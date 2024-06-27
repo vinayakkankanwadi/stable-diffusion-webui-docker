@@ -18,7 +18,7 @@ Offers:
 - Based on pytorch/pytorch:2.1.2-cuda12.1-cudnn8-runtime
 - Available Image aauno/stable-diffusion-webui-docker:latest
 - Use "entrypoint" and "command" in docker-compose to customize as required
-- Volume mapping directory as required
+- Volume is mapped using "--data-dir"
 
 Future Plans:
 - CI/CD for automated image update on AUTOMATIC1111/stable-diffusion-webui release

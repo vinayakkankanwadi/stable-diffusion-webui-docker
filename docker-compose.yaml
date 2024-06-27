@@ -3,10 +3,9 @@ services:
     container_name: stable-diffusion-webui
     image: aauno/stable-diffusion-webui-docker:latest
     entrypoint: ["./webui.sh"]
-    command: ["--skip-version-check","--allow-code","--enable-insecure-extension-access","--api","--listen","--xformers","--opt-channelslast"]
+    command: ["--skip-version-check","--allow-code","--enable-insecure-extension-access","--api","--listen","--xformers","--opt-channelslast", "--data-dir", "/stable-diffusion-webui/data"]
     volumes:
-      - /opt/stable-diffusion-webui/models:/stable-diffusion-webui/models
-      - /opt/stable-diffusion-webui/outputs:/stable-diffusion-webui/outputs
+      - /opt/stable-diffusion-webui/data:/stable-diffusion-webui/data
     ports:
       - "7860:7860"    
     restart: unless-stopped
